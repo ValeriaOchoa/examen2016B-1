@@ -1,3 +1,4 @@
+
 def rectangular ():
     print ('Volume_rectangular')
     altura=int(input("ingrese la altura de la pisina rectangular"))
@@ -22,6 +23,13 @@ def radio():
     r=int(input("ingrese la radio del circulo "))
     volumen=(a*pi)*(r**3)
     print("el volumen de la radio es",volumen)
+
+def repetir():
+    escoger = input("Ingrese S si desea continuar o N si desea salir\n")
+    while escoger == "S" or escoger == "s":
+        main()  #aqui damos la opcion al usuario de si desea continuar en el programa
+    print ("Programa Terminado")
+    sys.exit()
     
 
 
@@ -31,19 +39,22 @@ def main():
     choice=""
 #Menu
     print("Bienvenido eliga una opcion  ")
-    print("ver a la piscina de modo  rectangular volumen")
-    print("ver a la piscina de modo eliptica volumen")
-    print("Ver a la psiicina de modo circular volumen")
+    print("(1)Ver a la piscina de modo  rectangular volumen")
+    print("(2)Ver a la piscina de modo eliptica volumen")
+    print("(3)Ver a la psiicina de modo circular volumen")
     
     print("ingrese la opcion")
     choice=int(input(""))
 
     if choice ==1:
         rectangular()
+        repetir()
     if choice ==2:
         eliptica()
+        repetir()
     if choice ==3:
         radio()
+        repetir()
 
 main()
   

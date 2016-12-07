@@ -21,19 +21,19 @@ def conteo():
     union=""
     union2=""
     n=0
-    while n != 100000:
+    while n != 102400:
         for i in range(len(inter)):
-            if n <100000:
+            if n <102400:
                 union=union+inter[i]
                 n=n+1
     creartxt()
     grabartxt(union)
     n=0
 
-    while n != 1024000:
+    while n != 1048576:
         for i in range(len(inter)):
-            if n <1024000:
-                union=union+inter[i]
+            if n <1048576:
+                union2=union2+inter[i]
                 n=n+1
     crear2txt()
     grabar2txt(union2)

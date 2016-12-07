@@ -1,7 +1,7 @@
 ### Ejercicio 2
 
 def leer():
-    archi=open('poema.txt','r')
+    archi=open('100.txt','r')
     linea=archi.readline()
     while linea!="":
         print(linea)
@@ -11,7 +11,7 @@ def leer():
 leer()
 
 def contar():
-    archi=open('poema.txt','r')
+    archi=open('100.txt','r')
     archir=open('ResultadoContar.txt','w')
     p=0
     for i in archi.readlines():
@@ -27,7 +27,7 @@ contar()
 def palab():
     palabra=input("ingrese palabra a  buscar: ")
     archir=open('ResultadoContar.txt','a')
-    archi=open('poema.txt','r')
+    archi=open('100.txt','r')
     
     repeti=0
     lineas=archi.readlines()

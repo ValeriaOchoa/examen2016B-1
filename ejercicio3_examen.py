@@ -15,6 +15,15 @@ def eliptica():
     volumen=pi*ejem*ejemM*h
     print("el volumen del eliptica es",volumen)
 
+def radio():
+    print('volumen_radio')
+    a=(4/3)
+    pi=(3.14)
+    r=int(input("ingrese la radio del circulo "))
+    volumen=(a*pi)*(r**3)
+    print("el volumen de la radio es",volumen)
+    
+
 
 
 def main():
@@ -25,12 +34,15 @@ def main():
     print("ver a la piscina de modo  rectangular volumen")
     print("ver a la piscina de modo eliptica volumen")
     print("Ver a la psiicina de modo circular volumen")
+    print("ingrese la opcion")
     choice=int(input(""))
 
     if choice ==1:
         rectangular()
     if choice ==2:
         eliptica()
+    if choice ==3:
+        radio()
 
 main()
   

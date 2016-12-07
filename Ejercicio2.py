@@ -1,37 +1,62 @@
 ### Ejercicio 2
-print ("BUSCADOR DE NOMBRES")
-palabra = raw_input("Nombre a buscar: ")
-arch = raw_input("Nombre del archivo donde buscar: ")
 
-##f = open(str(arch),'r')
-##pa=0
-##
-##for i in f.readlines():
-##        palabras1=i.split(" ")
-##        pa=pa+len(palabras1)
-##        
-##print("\nel total de palabras es: "+str(pa)) 
-##f.close()
+def leer():
+    archi=open('poema.txt','r')
+    linea=archi.readline()
+    while linea!="":
+        print(linea)
+        linea=archi.readline()
+    archi.close
 
-repetidas = 0 
-f = open(str(arch))
-lines=f.readlines()
-for line in lines:
-    palabras = line.split(' ')
-    for p in palabras:
-        if p==palabra:
-            repetidas = repetidas+1
+leer()
 
-print "la palabra "+str(palabra)+" se repite "+str(repetidas)+" veces"
+def contar():
+    archi=open('poema.txt','r')
+    archir=open('ResultadoContar.txt','w')
+    p=0
+    for i in archi.readlines():
+        palabras=i.split(" ")
+        p=p+len(palabras)
+    print("\nel total de palabras es: ",p)
+    archir.write("el total de palabras es: "+str(p))
+    archi.close()
+    archir.close()
 
-f.close()
+contar()
 
-def creartxt():
-                archi=open('Numero_repetidas.txt','a')
-                archi.close
+def palab():
+    palabra=input("ingrese palabra a  buscar: ")
+    archir=open('ResultadoContar.txt','a')
+    archi=open('poema.txt','r')
+    
+    repeti=0
+    lineas=archi.readlines()
+    for line in lineas:
+        palabras=line.split(" ")
+        for p in palabras:
+            if p==palabra:
+                repeti=repeti+1
+    print("la palabra: ",palabra,"\nse repite: ",repeti)
+    print("(",palabra,",",repeti,")")
+    archir.write("\n("+str(palabra))
+    archir.write(","+str(repeti)+")")
+    archi.close
+    archir.close
+    
+    
+def denuevo():
+    global nuevo
+    print("Desea intentar nuevamente(si/no)")
+    nuevo=input()
+    nuevo=nuevo.lower()
+    while(nuevo!="no"):
+        palab()
+        denuevo()
 
-archi=open('Numero_repetidas.txt','a')
-archi.write('\nEl nombre se repite :'+str(repetidas)+' veces')
-archi.close
-            
+palab()
+denuevo()
+
+    
+
+
 

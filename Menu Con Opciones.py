@@ -2,12 +2,10 @@ def menu():
     print("\n********************************************")
     print("\tGRUPO 1")
     print("\t BIENVENIDOS AL MENU")
-    print("1.- Serie de Fibonacci\n")
-    print("2.- Determinar si un numero es par\n")
-    print("3.- Determinar si un numero es divisible para 3\n")
-    print("4.- Factorial de un numero\n")
-    print("5.- Poetncia de un numero\n")
-    print("6.- Salir.....\n")
+    print("1.- Programa que crea un archivo\n")
+    print("2.- Contiene archivos del ejercicio anterior\n")
+    print("3.- Calcular el volumen de una piscina\n")
+    print("4.- Salir.....\n")
 
 def Fibo():
     print("\tSERIE FIBONACCI")
@@ -50,7 +48,7 @@ def Poten():
         
 def main():
     opcion=1
-    while(opcion!=6):
+    while(opcion!=4):
      menu()
      print("ESCOJA ANA OPCION: ")
      opcion=int(input())
@@ -64,13 +62,7 @@ def main():
      elif opcion == 3:
         Divisible()
 
-     elif opcion == 4:
-        Facto()
-
-     elif opcion == 5:
-      Poten()
-
-     elif opcion==6:
+     elif opcion==4:
         print ("Has salido de la aplicación")
         exit()
      else:

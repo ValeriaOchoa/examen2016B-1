@@ -6,7 +6,14 @@ def rectangular ():
     volumen=altura*largo*ancho
     print("el volumen es",volumen,"metros cubicos")
     
-    
+def eliptica():
+    print('Volumen_eliptica')
+    pi=(3.14)
+    ejem=int(input("ingrese el eje menor"))
+    ejemM=int(input("ingrese el eje mayor"))
+    h=int (input("ingrese la altura "))
+    volumen=pi*ejem*ejemM*h
+    print("el volumen del eliptica es",volumen)
 
 
 
@@ -22,6 +29,8 @@ def main():
 
     if choice ==1:
         rectangular()
+    if choice ==2:
+        eliptica()
 
 main()
   

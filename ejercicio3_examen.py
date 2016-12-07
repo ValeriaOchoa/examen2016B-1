@@ -31,31 +31,30 @@ def repetir():
     print ("Programa Terminado")
     sys.exit()
     
-
-
-
 def main():
 #Opcion
     choice=""
-#Menu
-    print("Bienvenido eliga una opcion  ")
-    print("(1)Ver a la piscina de modo  rectangular volumen")
-    print("(2)Ver a la piscina de modo eliptica volumen")
-    print("(3)Ver a la psiicina de modo circular volumen")
-    
-    print("ingrese la opcion")
-    choice=int(input(""))
-
-    if choice ==1:
-        rectangular()
-        repetir()
-    if choice ==2:
-        eliptica()
-        repetir()
-    if choice ==3:
-        radio()
-        repetir()
-
+    while(choice!=3):
+        print("Bienvenido eliga una opcion  ")
+        print("(1)Ver a la piscina de modo  rectangular volumen")
+        print("(2)Ver a la piscina de modo eliptica volumen")
+        print("(3)Ver a la psiicina de modo circular volumen")
+        print("digite cero para salir")
+        print("ingrese la opcion")
+        choice=int(input(""))
+        if choice ==1:
+            rectangular()
+            repetir()
+        elif choice ==2:
+            eliptica()
+            repetir()
+        elif choice ==3:
+            radio()
+            repetir()
+        elif choice==0:
+            print("ADIOS")
+            exit()
+        else:
+            print("opcion incorrecta")
+            print("vuelva a ingresar")
 main()
-  
-    
